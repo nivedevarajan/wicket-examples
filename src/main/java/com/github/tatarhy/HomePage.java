@@ -1,5 +1,6 @@
 package com.github.tatarhy;
 
+import com.github.tatarhy.pdfjs.PdfViewerPage;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
@@ -21,6 +22,13 @@ public class HomePage extends WebPage {
             @Override
             public void onClick() {
                 setResponsePage(new MultiTimerPage());
+            }
+        });
+
+        add(new Link("PdfViewerPage") {
+            @Override
+            public void onClick() {
+                setResponsePage(new PdfViewerPage());
             }
         });
     }
